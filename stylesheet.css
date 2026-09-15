@@ -1,0 +1,200 @@
+/*
+Color Scheme:
+Background:        #111315
+Primary Text:      #f2f2f2
+Primary Purple:    #a77bf3
+Secondary Green:   #7fae9b
+*/
+
+/* Sets the overall page styling and creates the main CSS Grid layout using named areas. */
+body {
+    margin: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    background-color: #111315;
+    color: #f2f2f2;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "footer";
+}
+
+/* Assigns the page header to the named header area of the CSS Grid. */
+header {
+    grid-area: header;
+}
+
+/* Assigns the navigation section to the named nav area of the CSS Grid. */
+nav {
+    grid-area: nav;
+}
+
+/* Assigns the primary page content to the named main area of the CSS Grid. */
+main {
+    grid-area: main;
+}
+
+/* Assigns the footer to its named Grid area, separates it from the main content, and slightly reduces its text size. */
+footer {
+    grid-area: footer;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Sets the width of the site logo used across all pages. */
+.site-logo {
+    width: 30%;
+}
+
+/* Sets the width of the unique image used on the About page. */
+#about-image {
+    width: 75%;
+}
+
+/* Styles the main page heading with the primary purple accent and a larger font size. */
+h1 {
+    color: #a77bf3;
+    font-size: 2rem;
+}
+
+/* Styles section headings with the secondary green accent and a smaller font size. */
+h2 {
+    color: #7fae9b;
+    font-size: 1.5rem;
+}
+
+/* Uses Flexbox to arrange the featured game cards and allows them to wrap as the browser width changes. */
+.featured-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Styles each featured game card with spacing, flexible sizing, rounded corners, and a purple shadow. */
+.game-card {
+    margin: 2rem 1.5rem;
+    padding: 1rem;
+    flex: 0 1 15rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem #a77bf3;
+}
+
+/* Sets a responsive width for game card images while preserving their original proportions. */
+.game-card img {
+width: 15rem;
+max-width: 100%;
+height: auto;
+}
+
+/* Adds line spacing to paragraphs to improve readability. */
+p {
+    line-height: 1.5;
+}
+
+/* Uses Flexbox to create horizontal navigation and removes the default list markers. */
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Adds spacing below individual list items. */
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Styles hyperlinks with the site's primary purple accent color. */
+a {
+    color: #a77bf3;
+}
+
+/* Styles the JavaScript-generated recommendations list to match the site's horror theme. */
+#list ul {
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem #a77bf3;
+    width: 8rem;
+}
+
+/* Adds spacing between the generated horror game recommendations. */
+#list li {
+    margin-bottom: .75rem;
+}
+
+/* Styles grouped form sections to match the site's dark horror theme. */
+fieldset {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 0.1rem solid #7fae9b;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem #a77bf3;
+}
+
+/* Styles fieldset titles with the site's secondary green accent. */
+legend {
+    color: #7fae9b;
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+/* Styles standard text-entry fields. */
+input[type="text"] {
+    padding: 0.4rem;
+    margin: 0.4rem;
+    border-radius: 0.4rem;
+}
+
+/* Styles the email entry field. */
+input[type="email"] {
+    padding: 0.4rem;
+    margin: 0.4rem;
+    border-radius: 0.4rem;
+}
+
+/* Styles the gaming platform drop-down menu. */
+select {
+    padding: 0.4rem;
+    margin: 0.4rem;
+    border-radius: 0.4rem;
+}
+
+/* Adds spacing around radio buttons for easier selection and readability. */
+input[type="radio"] {
+    margin: 0.5rem;
+}
+
+/* Adds spacing around checkboxes for easier selection and readability. */
+input[type="checkbox"] {
+    margin: 0.5rem;
+}
+
+/* Styles the reset button to match the site's form design. */
+input[type="reset"] {
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    border-radius: 0.4rem;
+}
+
+/* Styles the submit button to match the site's form design. */
+input[type="submit"] {
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+}
+
+/* Styles validation error messages displayed below form fields. */
+.error-message {
+    display: block;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+    color: red;
+}
+
+/* Styles the overall successful form validation message. */
+.success-message {
+    display: block;
+    margin-top: 1rem;
+    color: green;
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Links the external stylesheet used to style the website.-->
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Contact | The Midnight Controller</title>
+</head>
+<body>
+    <header>
+        <img class="site-logo" src="images/logo.png" alt="Video Game controller surrounded and wrapped by Cthulhu-like tentacles.">
+        <h1>The Midnight Controller</h1>
+    </header>
+            <!--Main site Navigation-->
+        <nav>
+            <ul class="nav-list"> 
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="recommendations.html">Recommendations</a></li>
+                <li><a href="weather.html">Weather</a></li>
+            </ul>
+        </nav>
+        <!--Primary Contact page Content-->
+    <main>
+        <section>
+            <h2>Contact | The Midnight Controller</h2>
+                <p>
+                    Have a horror game recommendation, review suggestion, or hidden indie title you think deserves attention? 
+                    The Midnight Controller welcomes ideas from players who enjoy exploring the <strong>darker side of gaming</strong>. Whether you 
+                    want to suggest a classic survival horror game or share a new release, there are several ways to connect with the site.
+                </p>
+        </section>
+        <section>
+            <!-- Contact form for visitor feedback and horror game preferences. -->
+            <h2>Send us a Message</h2>
+                 <form id="webForm" action="#" novalidate>
+                    <!-- Collects the visitor's name, email, phone number, and favorite horror genre. -->
+                    <fieldset>
+                        <legend>Your Information</legend>
+                            <!-- Requires the visitor's name and limits the entry to between 2 and 50 characters. -->
+                            <label for="visitorName">Name:</label>
+                            <input type="text" id="visitorName" name="visitorName" minlength="2" maxlength="50" required>
+                            <!-- Displays validation feedback for the visitor's name. -->
+                            <span id="nameError" class="error-message"></span>
+
+                            <!-- Requires a valid email address before the form can be submitted. -->
+                            <label for="visitorEmail">Email:</label>
+                            <input type="email" id="visitorEmail" name="visitorEmail" required>
+                            <!-- Displays validation feedback for the visitor's email address. -->
+                             <span id="emailError" class="error-message"></span>
+
+                            <!-- Validates an optional phone number using the format 123-456-7890. -->
+                            <label for="visitorPhone">Phone:</label>
+                            <input type="tel"
+                                id="visitorPhone"
+                                name="visitorPhone"
+                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                placeholder="123-456-7890"> 
+                            <!-- Displays validation feedback if the phone number does not match the required format. -->
+                             <span id="phoneError" class="error-message"></span>
+
+                            <!-- Requires the visitor to enter or select a favorite horror genre. -->
+                            <label for="favoriteGenre">Favorite Horror Genre:</label>
+                            <input type="text" id="favoriteGenre" name="favoriteGenre" list="horrorGenres" required>
+                            <!-- Displays validation feedback for the visitor's favorite horror genre. -->
+                             <span id="genreError" class="error-message"></span>
+                                <!-- Provides suggested horror genres while allowing custom text entry. -->
+                                <datalist id="horrorGenres">
+                                    <option value="Survival Horror">Survival Horror</option>
+                                    <option value="Psychological Horror">Psychological Horror</option>
+                                    <option value="Cosmic Horror">Cosmic Horror</option>
+                                    <option value="Supernatural Horror">Supernatural Horror</option>
+                                    <option value="Sci-Fi Horror">Sci-Fi Horror</option>
+                                </datalist>
+                    </fieldset>
+                    <!-- Collects the visitor's horror gaming preferences. -->
+                    <fieldset>
+                        <legend>Horror Preferences</legend>
+                            <!-- Radio buttons allow the visitor to select one preferred horror experience. -->
+                            <p>Preferred Horror Experience:</p>
+                                <input type="radio" id="storyFocused" name="horrorExperience" value="Story Focused">
+                                <label for="storyFocused">Story Focused</label>
+
+                                <input type="radio" id="survivalFocused" name="horrorExperience" value="Survival Focused">
+                                <label for="survivalFocused">Survival Focused</label>
+
+                                <input type="radio" id="actionFocused" name="horrorExperience" value="Action Focused">
+                                <label for="actionFocused">Action Focused</label>
+                            <!-- Checkboxes allow the visitor to select multiple horror game features. -->
+                            <p>What do you enjoy most in horror games?</p>
+                                <input type="checkbox" id="atmosphere" name="horrorFeatures" value="Atmosphere">
+                                <label for="atmosphere">Atmosphere</label>
+
+                                <input type="checkbox" id="storytelling" name="horrorFeatures" value="Storytelling">
+                                <label for="storytelling">Storytelling</label>
+
+                                <input type="checkbox" id="creatureDesign" name="horrorFeatures" value="Creature Design">
+                                <label for="creatureDesign">Creature Design</label>
+
+                                <input type="checkbox" id="exploration" name="horrorFeatures" value="Exploration">
+                                <label for="exploration">Exploration</label>
+                            <!-- Drop-down menu allows the visitor to select a preferred gaming platform. -->
+                            <p>Preferred Gaming Platform:</p>    
+                                <label for="platform">Select a Platform:</label>
+                                    <select name="platform" id="platform">
+                                        <option value="">Select a Platform</option>
+                                        <option value="Playstation">Playstation</option>
+                                        <option value="Xbox">Xbox</option>
+                                        <option value="PC">PC</option>
+                                        <option value="Nintendo Switch">Nintendo Switch</option>
+                                    </select>
+                    </fieldset>
+                        <!-- Provides controls to clear the form or submit the entered information. -->
+                        <input type="reset" value="Clear Form">
+                        <input type="submit" value="Submit">
+
+                        <!-- Displays the overall result of the form validation. -->
+                         <div id="validationMessage"></div>
+                 </form>
+                    <div id="formOutput"></div>
+        </section>
+        <section>
+            <h2>Connect With Us</h2>
+                <ul>
+                    <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+                    <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="mailto:contact@themidnightcontroller.com">Email Us</a></li>
+                </ul>
+        </section>
+        <section>
+            <h2>Helpful Horror Gaming Resources</h2>
+                <ul>
+                    <li><a href="https://www.ign.com/games/genre/horror" target="_blank" rel="noopener">IGN Horror</a></li>
+                    <li><a href="https://kotaku.com/best-horror-games-ps5-xbox-steam-pc-silent-hill-2-1851671021" target="_blank" rel="noopener">Kotaku Horror Recommendations</a></li>
+                </ul>
+        </section>
+        
+    </main>
+        <!--Footer, social links and copyright-->
+    <footer>
+        <p><em>Please Visit our Socials</em></p>
+          <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>  
+          <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+            <p>&copy; 2026 The Midnight Controller</p>
+    </footer>
+    <!-- Links the external JavaScript used to read and display submitted form data. -->
+     <script src="form.js"></script>
+     <!-- Links the external JavaScript used to incorporate form validation. -->
+     <script src="validation.js"></script>
+</body>
+</html>
